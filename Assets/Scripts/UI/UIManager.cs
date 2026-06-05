@@ -83,10 +83,10 @@ namespace DeliveryRushExam.UI
                 return;
             }
 
-            scoreText.text = "Score: " + scoreManager.Score;
-            coinsText.text = "Coins: " + scoreManager.Coins;
-            timerText.text = "Time: " + Mathf.CeilToInt(gameManager.RemainingTime);
-            ordersCountText.text = "Orders: " + orderManager.ActiveOrders.Count;
+            scoreText.text = $"Score: {scoreManager.Score}";
+            coinsText.text = $"Coins: {scoreManager.Coins}";
+            timerText.text = $"Time: {Mathf.CeilToInt(gameManager.RemainingTime)}";
+            ordersCountText.text = $"Orders: {orderManager.ActiveOrders.Count}";
 
             for (int i = 0; i < orderViews.Count; i++)
             {
@@ -117,11 +117,6 @@ namespace DeliveryRushExam.UI
 
         private void RefreshOrderList()
         {
-            OrderManager runtimeOrderManager = FindFirstObjectByType<OrderManager>();
-            if (runtimeOrderManager != null)
-            {
-                orderManager = runtimeOrderManager;
-            }
 
             for (int i = 0; i < orderViews.Count; i++)
             {
