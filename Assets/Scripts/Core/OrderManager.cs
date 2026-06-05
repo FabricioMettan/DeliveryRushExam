@@ -54,11 +54,19 @@ namespace DeliveryRushExam.Core
             {
                 activeOrders[i].remainingTime -= Time.deltaTime;
             }
-            
-            int expiredCount = activeOrders.Where(order => order.remainingTime <= 0f).Count();
+
+            int expiredCount = 0;
+            for (int i = activeOrders.Count - 1; i >= 0; i--)
+            {
+                if (activeOrders[i].remainingTime <= 0f)
+                {
+                    activeOrders.RemoveAt(i);
+                    expiredCount++;
+                }
+            }
+
             if (expiredCount > 0)
             {
-                activeOrders.RemoveAll(order => order.remainingTime <= 0f);
                 OrdersChanged?.Invoke();
             }
 
