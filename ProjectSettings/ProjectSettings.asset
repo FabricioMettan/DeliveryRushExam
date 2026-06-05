@@ -144,8 +144,7 @@ PlayerSettings:
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
   bundleVersion: 1.0
-  preloadedAssets:
-  - {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -587,7 +586,8 @@ PlayerSettings:
   webGLCloseOnQuit: 0
   webWasm2023: 0
   webEnableSubmoduleStrippingCompatibility: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    Standalone: DELIVERY_RUSH_UGS
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
@@ -686,11 +686,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
-  cloudProjectId: 38033271-f50c-4b2b-9698-7789ba2d394c
+  cloudProjectId: 5e1b1ee8-ffb1-407e-a1ae-04db3f69ac2a
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: Examen_2
-  organizationId: unity_fh0dwanefspd5g
+  organizationId: f-a-b-r-i
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
