@@ -35,9 +35,12 @@ namespace DeliveryRushExam.UI
         [SerializeField] private TMP_Text resultsText;
 
         private readonly List<OrderButtonView> orderViews = new List<OrderButtonView>();
+        private Canvas _canvas;
 
         private void Awake()
         {
+            _canvas = GetComponentInParent<Canvas>();
+
             if (gameManager == null)
             {
                 gameManager = FindFirstObjectByType<GameManager>();
@@ -88,12 +91,6 @@ namespace DeliveryRushExam.UI
             for (int i = 0; i < orderViews.Count; i++)
             {
                 orderViews[i].Refresh();
-            }
-
-            Canvas canvas = GetComponentInParent<Canvas>();
-            if (canvas != null && ordersContainer != null)
-            {
-                LayoutRebuilder.ForceRebuildLayoutImmediate(ordersContainer);
             }
         }
 
